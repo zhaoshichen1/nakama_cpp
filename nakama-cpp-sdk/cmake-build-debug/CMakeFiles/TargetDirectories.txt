@@ -1,0 +1,2 @@
+/Users/zhaoshichen/c++_python_java/nakama-cpp-sdk/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/zhaoshichen/c++_python_java/nakama-cpp-sdk/cmake-build-debug/CMakeFiles/edit_cache.dir
