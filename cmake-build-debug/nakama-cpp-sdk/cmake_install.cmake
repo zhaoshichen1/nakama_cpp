@@ -1,4 +1,4 @@
-# Install script for directory: /Users/zhaoshichen/c++_python_java/test-nakama-cpp/nakama-cpp-sdk
+# Install script for directory: /Users/yanthems/Desktop/nakama_cpp/nakama-cpp-sdk
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

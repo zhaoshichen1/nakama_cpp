@@ -1,5 +1,5 @@
-/Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/CMakeFiles/openfuck.dir
-/Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/nakama-cpp-sdk/CMakeFiles/rebuild_cache.dir
-/Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/nakama-cpp-sdk/CMakeFiles/edit_cache.dir
+/Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/CMakeFiles/openfuck.dir
+/Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/nakama-cpp-sdk/CMakeFiles/rebuild_cache.dir
+/Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/nakama-cpp-sdk/CMakeFiles/edit_cache.dir

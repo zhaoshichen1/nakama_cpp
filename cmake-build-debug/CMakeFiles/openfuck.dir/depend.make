@@ -10,6 +10,7 @@ CMakeFiles/openfuck.dir/main.cpp.o: ../nakama-cpp-sdk/include/nakama-cpp/NSessio
 CMakeFiles/openfuck.dir/main.cpp.o: ../nakama-cpp-sdk/include/nakama-cpp/NTypes.h
 CMakeFiles/openfuck.dir/main.cpp.o: ../nakama-cpp-sdk/include/nakama-cpp/Nakama.h
 CMakeFiles/openfuck.dir/main.cpp.o: ../nakama-cpp-sdk/include/nakama-cpp/NakamaVersion.h
+CMakeFiles/openfuck.dir/main.cpp.o: ../nakama-cpp-sdk/include/nakama-cpp/StrUtil.h
 CMakeFiles/openfuck.dir/main.cpp.o: ../nakama-cpp-sdk/include/nakama-cpp/data/NAccount.h
 CMakeFiles/openfuck.dir/main.cpp.o: ../nakama-cpp-sdk/include/nakama-cpp/data/NAccountDevice.h
 CMakeFiles/openfuck.dir/main.cpp.o: ../nakama-cpp-sdk/include/nakama-cpp/data/NChannelMessage.h
@@ -62,6 +63,6 @@ CMakeFiles/openfuck.dir/main.cpp.o: ../nakama-cpp-sdk/include/nakama-cpp/realtim
 CMakeFiles/openfuck.dir/main.cpp.o: ../nakama-cpp-sdk/include/nakama-cpp/realtime/rtdata/NStreamPresenceEvent.h
 CMakeFiles/openfuck.dir/main.cpp.o: ../nakama-cpp-sdk/include/nakama-cpp/realtime/rtdata/NUserPresence.h
 CMakeFiles/openfuck.dir/main.cpp.o: ../nakama-cpp-sdk/include/nonstd/optional.hpp
+CMakeFiles/openfuck.dir/main.cpp.o: ../json.hpp
 CMakeFiles/openfuck.dir/main.cpp.o: ../main.cpp
-CMakeFiles/openfuck.dir/main.cpp.o: ../main.h
 

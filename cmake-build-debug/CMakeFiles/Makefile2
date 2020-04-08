@@ -44,10 +44,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/zhaoshichen/c++_python_java/test-nakama-cpp
+CMAKE_SOURCE_DIR = /Users/yanthems/Desktop/nakama_cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/yanthems/Desktop/nakama_cpp/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -76,14 +76,14 @@ preinstall: nakama-cpp-sdk/preinstall
 CMakeFiles/openfuck.dir/all:
 	$(MAKE) -f CMakeFiles/openfuck.dir/build.make CMakeFiles/openfuck.dir/depend
 	$(MAKE) -f CMakeFiles/openfuck.dir/build.make CMakeFiles/openfuck.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target openfuck"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target openfuck"
 .PHONY : CMakeFiles/openfuck.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/openfuck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/openfuck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/openfuck.dir/rule
 
 # Convenience name for target.

@@ -8,20 +8,20 @@
 		<Option virtualFolders="CMake Files\;CMake Files\nakama-cpp-sdk\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/nakama-cpp-sdk"/>
+				<Option working_dir="/Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/nakama-cpp-sdk"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/nakama-cpp-sdk/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/nakama-cpp-sdk/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/nakama-cpp-sdk/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/nakama-cpp-sdk/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/local/bin/gmake -j4 -f &quot;/Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/nakama-cpp-sdk/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/local/bin/gmake -j4 -f &quot;/Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/nakama-cpp-sdk/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j4 -f &quot;/Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/nakama-cpp-sdk/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j4 -f &quot;/Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/nakama-cpp-sdk/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/zhaoshichen/c++_python_java/test-nakama-cpp/CMakeLists.txt">
+		<Unit filename="/Users/yanthems/Desktop/nakama_cpp/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/zhaoshichen/c++_python_java/test-nakama-cpp/nakama-cpp-sdk/CMakeLists.txt">
+		<Unit filename="/Users/yanthems/Desktop/nakama_cpp/nakama-cpp-sdk/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\nakama-cpp-sdk\"/>
 		</Unit>
 	</Project>

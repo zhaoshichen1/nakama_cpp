@@ -1,9 +1,12 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include <vector>
 #include "nakama-cpp/Nakama.h"
-#include "nakama-cpp/NUtils.h"
+#include "json.hpp"
+#include "nakama-cpp/StrUtil.h"
 
+using bytes=std::vector<char>;
 class Client {
 private:
     Nakama::NClientPtr m_client;
@@ -12,6 +15,7 @@ private:
 //    Nakama::NRtClientListenerPtr m_listen;
     Nakama::NRtDefaultClientListener m_listen;
     std::string email, password, username;
+    bool m_realtime;
 public:
     Client(const std::string &email = "test@test.com", const std::string &password = "testpass")
             : email(email), password(password), username(email) {
@@ -47,6 +51,7 @@ public:
             auto msg = "connect";
             m_client->setUserData(const_cast<char *>(msg));
             join("test-room");
+            m_realtime=true;
         });
         m_listen.setChannelMessageCallback([this](const Nakama::NChannelMessage&msg){
             Nakama::NLogger::Debug(msg.content,"m_listen-getmsg");
@@ -78,8 +83,31 @@ public:
         });
 
         Nakama::NLogger::Debug("send hello", "rpc-test");
-        m_rt->rpc("hello");
+//        m_rt->rpc("world",u8"{\"test\":2}");
 //        m_client->rpc(m_season,"hello");
+    }
+    void send(const std::string&msg) {
+        auto jstr=R"( {"abdefawdc":"233"} )";
+//        auto jstr=R"( {"abc":"233"} )";
+//        auto jstr=R"( {"abcdefghijk":"233"} )";
+//        auto j=nlohmann::json::parse(jstr);
+//        std::cout<<j.dump(2)<<std::endl;
+        if (m_realtime) {
+//            auto data=std::string(j.dump());
+#if 1
+            m_client->rpc(m_season,"hello","jstr22222222222",[](const Nakama::NRpc&rpc){
+                Nakama::NLogger::Debug(rpc.payload, "m_client-hello-callback");
+            });
+#endif
+#if 0
+            m_rt->rpc("hello",jstr, [&](const Nakama::NRpc &rpc) {
+                Nakama::NLogger::Debug(rpc.payload, "hello-callback");
+            });
+            m_rt->rpc("bar", jstr, [&](const Nakama::NRpc &rpc) {
+                Nakama::NLogger::Debug(rpc.payload, "bar-callback");
+            });
+#endif
+        }
     }
 
     void tick() {
@@ -98,15 +126,32 @@ int main() {
     Nakama::NLogger::initWithConsoleSink(Nakama::NLogLevel::Debug);
 
     Client c1{"test1@test.com"};
-//    Client c2{"test2@test.com"};
 
     c1.connect();
-//    c2.connect();
 
+    auto t3 = std::thread{[&]() {
+        while (true) {
+            c1.send("233333");
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+    }};
     auto t1 = std::thread{[&]() { c1.tick(); }};
-//    auto t2 = std::thread{[&]() { c2.tick(); }};
+
+    Client c2{"test2@test.com"};
+    c2.connect();
+    auto t2 = std::thread{[&]() { c2.tick(); }};
+
+    auto t4 = std::thread{[&]() {
+        while (true) {
+            c2.send("322222");
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+    }};
+
     t1.join();
-//    t2.join();
+    t2.join();
+    t3.join();
+    t4.join();
     std::this_thread::sleep_for(std::chrono::seconds(5));
     std::cout << "fuck" << std::endl;
 

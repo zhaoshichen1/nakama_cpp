@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/zhaoshichen/c++_python_java/test-nakama-cpp/main.cpp" "/Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/CMakeFiles/openfuck.dir/main.cpp.o"
+  "/Users/yanthems/Desktop/nakama_cpp/main.cpp" "/Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/CMakeFiles/openfuck.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

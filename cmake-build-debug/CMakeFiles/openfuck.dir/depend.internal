@@ -11,6 +11,7 @@ CMakeFiles/openfuck.dir/main.cpp.o
  ../nakama-cpp-sdk/include/nakama-cpp/NTypes.h
  ../nakama-cpp-sdk/include/nakama-cpp/Nakama.h
  ../nakama-cpp-sdk/include/nakama-cpp/NakamaVersion.h
+ ../nakama-cpp-sdk/include/nakama-cpp/StrUtil.h
  ../nakama-cpp-sdk/include/nakama-cpp/data/NAccount.h
  ../nakama-cpp-sdk/include/nakama-cpp/data/NAccountDevice.h
  ../nakama-cpp-sdk/include/nakama-cpp/data/NChannelMessage.h
@@ -63,5 +64,5 @@ CMakeFiles/openfuck.dir/main.cpp.o
  ../nakama-cpp-sdk/include/nakama-cpp/realtime/rtdata/NStreamPresenceEvent.h
  ../nakama-cpp-sdk/include/nakama-cpp/realtime/rtdata/NUserPresence.h
  ../nakama-cpp-sdk/include/nonstd/optional.hpp
- /Users/zhaoshichen/c++_python_java/test-nakama-cpp/main.cpp
- /Users/zhaoshichen/c++_python_java/test-nakama-cpp/main.h
+ /Users/yanthems/Desktop/nakama_cpp/json.hpp
+ /Users/yanthems/Desktop/nakama_cpp/main.cpp

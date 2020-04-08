@@ -1,4 +1,4 @@
-# Install script for directory: /Users/zhaoshichen/c++_python_java/test-nakama-cpp
+# Install script for directory: /Users/yanthems/Desktop/nakama_cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/nakama-cpp-sdk/cmake_install.cmake")
+  include("/Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/nakama-cpp-sdk/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/zhaoshichen/c++_python_java/test-nakama-cpp/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/yanthems/Desktop/nakama_cpp/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
