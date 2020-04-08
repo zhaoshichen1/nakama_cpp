@@ -94,12 +94,12 @@ public:
 //        std::cout<<j.dump(2)<<std::endl;
         if (m_realtime) {
 //            auto data=std::string(j.dump());
-#if 1
-            m_client->rpc(m_season,"hello","jstr22222222222",[](const Nakama::NRpc&rpc){
+#if 0
+            m_client->rpc(m_season,"hello",jstr,[](const Nakama::NRpc&rpc){
                 Nakama::NLogger::Debug(rpc.payload, "m_client-hello-callback");
             });
 #endif
-#if 0
+#if 1
             m_rt->rpc("hello",jstr, [&](const Nakama::NRpc &rpc) {
                 Nakama::NLogger::Debug(rpc.payload, "hello-callback");
             });
