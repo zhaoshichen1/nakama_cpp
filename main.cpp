@@ -14,7 +14,10 @@ private:
     Nakama::NSessionPtr m_season;
 //    Nakama::NRtClientListenerPtr m_listen;
     Nakama::NRtDefaultClientListener m_listen;
+    Nakama::NChannelPtr m_channel;
     std::string email, password, username;
+
+    bool joinedChat;
     bool m_realtime;
 public:
     Client(const std::string &email = "test@test.com", const std::string &password = "testpass")
@@ -55,6 +58,12 @@ public:
         });
         m_listen.setChannelMessageCallback([this](const Nakama::NChannelMessage&msg){
             Nakama::NLogger::Debug(msg.content,"m_listen-getmsg");
+            if(msg.senderId == m_season->getUserId()){
+                std::cout << "got my msg";
+                return ;
+            }
+
+            std::cout << "got another msg " <<  msg.content << msg.senderId << msg.username;
         });
 
         m_listen.setNotificationsCallback([this](const Nakama::NNotificationList&list){
@@ -73,6 +82,8 @@ public:
     }
     void join(const std::string&room){
         m_rt->joinChat(room,Nakama::NChannelType::ROOM,{},{},[&](Nakama::NChannelPtr ptr){
+            joinedChat = true;
+            this->m_channel = ptr;
             Nakama::NLogger::Debug(ptr->roomName, "join-joinChat");
             for(auto &i:ptr->presences){
                 Nakama::NLogger::Debug(i.username, "join");
@@ -92,14 +103,17 @@ public:
 //        auto jstr=R"( {"abcdefghijk":"233"} )";
 //        auto j=nlohmann::json::parse(jstr);
 //        std::cout<<j.dump(2)<<std::endl;
-        if (m_realtime) {
+        if (m_realtime ) {
 //            auto data=std::string(j.dump());
+            if (this->joinedChat) {
+                m_rt->writeChatMessage(this->m_channel->id, u8"{\"nimabi\":\"mmp\"}");
+            }
 #if 0
             m_client->rpc(m_season,"hello",jstr,[](const Nakama::NRpc&rpc){
                 Nakama::NLogger::Debug(rpc.payload, "m_client-hello-callback");
             });
 #endif
-#if 1
+#if 0
             m_rt->rpc("hello",jstr, [&](const Nakama::NRpc &rpc) {
                 Nakama::NLogger::Debug(rpc.payload, "hello-callback");
             });
@@ -131,7 +145,7 @@ int main() {
 
     auto t3 = std::thread{[&]() {
         while (true) {
-            c1.send("233333");
+            c1.send("I'm 3");
             std::this_thread::sleep_for(std::chrono::seconds(1));
         }
     }};
@@ -143,7 +157,7 @@ int main() {
 
     auto t4 = std::thread{[&]() {
         while (true) {
-            c2.send("322222");
+            c2.send("I'm 4");
             std::this_thread::sleep_for(std::chrono::seconds(1));
         }
     }};
